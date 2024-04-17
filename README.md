@@ -1,6 +1,6 @@
 Lechero
 
-Welcome to Lechero, your one-stop destination for farm-fresh milk delivered right to your doorstep at your preferred time. At Lechero, we offer a variety of milk products to suit your taste and dietary preferences. Whether you prefer traditional cow or buffalo milk, indulgent flavored options like chocolate, strawberry, or banana milk, or plant-based alternatives like oat, cashew, or almond milk, we have something for everyone.
+Welcome to Lechero, your one-stop destination for farm-fresh milk delivered right to your doorstep at your preferred time. At Lechero, we offer a variety of milk products to suit your taste and dietary preferences. Whether you prefer traditional cow or buffalo milk, indulgent flavored options like chocolate, strawberry, or banana milk, or plant-based alternatives like oat milk, cashew milk, or almond milk, we have something for everyone.
 
 About
 
@@ -8,7 +8,7 @@ Lechero is a web application developed to streamline the process of ordering fre
 
 Features
 1. Authentication
-Secure user authentication system ensures the privacy and security of customer accounts.
+A secure user authentication system ensures the privacy and security of customer accounts.
 Customers can register using their email address and password.
 2. Product Catalog
 Browse our extensive product catalog featuring a variety of milk options, categorized into regular milk, kids' favorites, and plant-based alternatives.
@@ -27,15 +27,22 @@ Easily add new products to the database to expand our product offerings.
 To get started with Lechero, follow these steps:
 
 Clone this repository to your local machine.
+
 Install the necessary dependencies by running pip install -r requirements.txt.
+
 Set up your database using Flask-Migrate:
-flask db init
-flask db migrate -m "Initial migration"
-flask db upgrade
+->flask db init
+
+->flask db migrate -m "Initial migration"
+
+->flask db upgrade
+
 Run the Flask application:
-flask run
+
+->flask run
 
 Contributing
+
 Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please feel free to open an issue or submit a pull request.
 
 Contact
