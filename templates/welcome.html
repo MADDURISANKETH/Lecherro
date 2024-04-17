@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lechero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/2bab4cccaa.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <header>
+        <a href= "{{ url_for('home') }}"> <img src="{{ url_for('static', filename='css/logo.jpeg') }}" alt="Lechero Logo" ></a>
+        
+        <nav>
+            <ul>
+                <li><a href= "{{ url_for('cart') }}"> <i class="fa fa-shopping-cart" style="font-size:20px"></i></a></li>
+                <li><a href="#" onclick="logoutUser()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 align="center">Welcome to Lechero</h1>
+    
+    <div class="container">
+        <div class="section-block" id="about-us">
+          <h2>Hello,  {{ user.firstname }}</h2>
+          <div class="company-description">
+            <h3>Our Delivery Process</h3>
+            <p><b>We offer a diverse selection of milk, categorized into three distinct types: regular milk, children's milk, and plant-based milk. Customers have the option to select their desired milk variant and add it to their cart for checkout. During the checkout process, customers are prompted to specify their preferred delivery time, ensuring convenience and timely service</p><br>
+                <p>Our commitment to quality and safety is paramount. Our dedicated team of delivery personnel, whom we affectionately refer to as 'Lecheros', undergo rigorous training to ensure the safe and hygienic delivery of your order. Each delivery is meticulously handled to guarantee freshness and cleanliness.</p><br>
+                <p>As a token of our appreciation for their service, our Lecheros utilize carts to transport your milk bottles to your doorstep. We kindly request customers to return the cart outside their residence for collection the following day, thereby facilitating a seamless delivery process for all.</p><br>
+                <p>We extend our gratitude to our valued customers for their patronage and for maintaining a healthy relationship with our Lecheros. Rest assured, we remain steadfast in our commitment to delivering 'freshness at your doorstep' with every order.</p>          </div>
+            </div>
+        </div>
+        
+        <div class="section-block" id="regular-milk">
+          <h2>Regular Milk</h2>
+          <div class="company-description">
+            <h3>Regular Milk: Freshness Straight from our own cattle</h3>
+            
+            
+            
+            <div class="product" id="cowmilk">
+                <div class="product-name">
+                <img src="{{ url_for('static', filename='css/cowmilk.png') }}" alt="Cow Milk">
+                <h3>Cow Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('cowmilk')">Add to Cart</button>
+                </div>
+                <div class ="product-info">
+                    <p> .........................some info ...........................</p>
+                </div>
+            </div>
+            
+            <div class="product" id="buffalomilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/buffalomilk.png') }}" alt="Product Image">
+                <h3>Buffalo Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('buffalomilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-block" id="kids-milk">
+          <h2>Kids Section</h2>
+          <div class="company-description">
+            <h3>Kids Section: Delightful and Nutritious Flavors for Little Ones</h3>
+            
+            
+            <div class="product" id="chocolatemilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/chocolatemilk.png') }}" alt="Product Image">
+                <h3>Chocolate Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('chocolatemilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+
+
+
+
+
+            <div class="product" id="strawberrymilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/strawberrymilk.png') }}" alt="Product Image">
+                <h3>Strawberry Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('strawberrymilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+
+
+            <div class="product" id="bananamilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/bananamilk.png') }}" alt="Product Image">
+                <h3>Banana Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('bananamilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-block" id="plant-based">
+          <h2>Plant Based</h2>
+          <div class="company-description">
+            <h3>Plant Based: Nourishing Alternatives for a Healthier Lifestyle</h3>
+            
+            <div class="product" id="oatmilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/oatmilk.png') }}" alt="Product Image">
+                <h3>Oat Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('oatmilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+
+            <div class="product" id="cashewmilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/cashewmilk.png') }}" alt="Product Image">
+                <h3>Cashew Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('cashewmilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+            <div class="product" id="almondmilk">
+                <div class ="product-name">
+                <img src="{{ url_for('static', filename='css/almondmilk.png') }}" alt="Product Image">
+                <h3>Almond Milk</h3>
+                <p>Price: 80</p>
+                <button onclick="addToCart('almondmilk')">Add to Cart</button>
+                </div>
+                    <div class ="product-info">
+                        <p> .........................some info ...........................</p>
+                    </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    <footer>
+        <i class="fa fa-instagram icon" style="font-size:20px;color:black"></i>
+        <i class="fa fa-facebook-square icon" style="font-size:20px;color:black"></i>
+        <i class="fa fa-linkedin-square icon" style="font-size:20px;color:black"></i><br><br>
+        <span id="copyright" style="font-size:16px;color:black">&copy; 2022</span>
+      </footer>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>

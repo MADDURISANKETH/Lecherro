@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lechero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/2bab4cccaa.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+      var cartUrl = "{{ url_for('cart') }}";
+  </script>
+</head>
+<body>
+    <header>
+        <a href= "{{ url_for('home') }}"> <img src="{{ url_for('static', filename='css/logo.jpeg') }}" alt="Lechero Logo" ></a>
+
+        <nav>
+            <ul>
+                <li ><a href="{{ url_for('register') }}"> Register</a></li>
+                <li ><a href="{{ url_for('login') }}">Login</a> </li>
+            </ul>
+        </nav>
+
+        
+        
+    </header>
+
+        <h1 align="center">Welcome to Lechero</h1>
+    
+        <div class="container">
+            <div class="section-block" id="about-us">
+              <h2>About Us</h2>
+              <div class="company-description">
+                <h3>Our Commitment to Excellence at Lechero</h3>
+                <p>At Lechero, we are dedicated to providing our customers with nothing but the highest quality milk products and service. With a passion for freshness and reliability, we ensure that every drop of milk that reaches your doorstep meets our rigorous standards for purity and taste. Our commitment to excellence extends beyond just the product itself – it encompasses the entire experience of receiving your milk delivery, from the ease of ordering to the eco-friendly packaging we use. When you choose Lechero, you're not just getting milk; you're getting a commitment to quality and convenience.</p>
+              </div>
+            </div>
+            
+            <div class="section-block" id="regular-milk">
+              <h2>Regular Milk</h2>
+              <div class="company-description">
+                <h3>Regular Milk: Freshness Straight from the Farm</h3>
+                <p>Experience the wholesome goodness of our regular milk, sourced directly from local farms. Our cows and buffaloes are raised in healthy, natural environments, ensuring that the milk they produce is of the highest quality. Rich in essential nutrients and free from artificial additives, our regular milk is a testament to our dedication to providing you with a natural and nourishing beverage option. With Lechero's regular milk, you can trust that every glass is filled with freshness and goodness, straight from the farm to your table.</p>
+              </div>
+            </div>
+            
+            <div class="section-block" id="kids-milk">
+              <h2>Kids Section</h2>
+              <div class="company-description">
+                <h3>Kids Section: Delightful and Nutritious Flavors for Little Ones</h3>
+                <p>Treat your little ones to a delightful selection of flavored milk options from Lechero's Kids Section. Crafted with care and attention to both taste and nutrition, our chocolate, strawberry, and banana milk varieties are sure to be a hit with children of all ages. Made with real ingredients and free from artificial flavors or colors, our flavored milk options provide a nutritious and delicious alternative to sugary beverages. At Lechero, we believe that good nutrition should be enjoyable, and our Kids Section is proof of our commitment to providing wholesome options that kids love.</p>
+              </div>
+            </div>
+            
+            <div class="section-block" id="plant-based">
+              <h2>Plant Based</h2>
+              <div class="company-description">
+                <h3>Plant Based: Nourishing Alternatives for a Healthier Lifestyle</h3>
+                <p>For those following a vegan or plant-based lifestyle, Lechero offers a range of nourishing alternatives to traditional dairy milk. Our almond, cashew, and oat milk options provide all the goodness of dairy milk without any of the lactose or animal-derived ingredients. Packed with essential nutrients and bursting with flavor, our plant-based milk alternatives are perfect for those looking to make healthier choices without sacrificing taste or quality. At Lechero, we believe that everyone deserves access to delicious and nutritious beverages, regardless of dietary preferences.</p>
+              </div>
+            </div>
+            
+            <div class="section-block" id="how-we-deliver">
+              <h2>Convenient Delivery</h2>
+              <div class="company-description">
+                <h3>Convenient Delivery: Freshness Delivered to Your Doorstep</h3>
+                <p>At Lechero, we understand the importance of convenience when it comes to your milk delivery. That's why we've streamlined the entire process, making it easier than ever to enjoy fresh milk straight from the farm. With our simple online ordering system, you can place your order in just a few clicks and have your milk delivered directly to your doorstep at a time that suits you. Our dedicated team of Lecheros ensures that your milk is delivered in eco-friendly packaging, maintaining its freshness and quality every step of the way. Experience the convenience of Lechero's doorstep delivery service and enjoy the freshest milk, hassle-free.</p>
+              </div>
+            </div>
+          </div>
+    
+          <footer>
+            <i class="fa fa-instagram icon" style="font-size:20px;color:black"></i>
+            <i class="fa fa-facebook-square icon" style="font-size:20px;color:black"></i>
+            <i class="fa fa-linkedin-square icon" style="font-size:20px;color:black"></i><br><br>
+            <span id="copyright" style="font-size:16px;color:black">&copy; 2022</span>
+          </footer>
+
+
+</body>
+</html>

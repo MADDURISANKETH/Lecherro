@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../css/lechero.png');
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    background-color: #ffffff; 
+}
+
+header {
+    
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+header img {
+    width: 160px;
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #111010f4;
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+.section-block {
+    padding: 20px;
+    margin-bottom: 10px; 
+    transition: all 10s ease-in-out;
+}
+
+.section-block h2 {
+    margin: 0; 
+    background-color: #ddd; 
+    padding: 10px;
+    cursor: pointer;
+}
+
+.company-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 10s ease-in-out, padding 10s ease-in-out, opacity 10s ease-in-out, visibility 2s ease-in-out, 2s;
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 0 20px; 
+    margin-top: 10px; 
+    opacity: 0;
+    visibility: hidden;
+}
+
+.section-block:hover .company-description {
+    max-height: 1000px; 
+    padding: 20px; 
+    opacity: 1; 
+    visibility: visible; 
+}
+
+  #about-us .company-description {
+    display: block;
+    opacity: 1; 
+    transform: scaleY(1);
+  }
+  .company-description h3 {
+    color: #12788cce; 
+    margin-top: 0; 
+}
+
+
+
+
+p {
+    color: #555; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+}
+
+
+
+.company-description p {
+    color: #333333af; 
+    font-size: 16px; 
+    line-height: 1.6;
+}
+
+.company-description p:first-child {
+    font-weight: bold; 
+    
+}
+
+.company-description p:last-child {
+    margin-bottom: 0; 
+}
+  
+#about-us h2,
+#regular-milk h2,
+#kids-milk h2,
+#plant-based h2,
+#how-we-deliver h2 {
+  background-color: #a1dee101;
+}
+
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .section-block {
+      padding: 10px;
+    }
+  
+    .company-description {
+      width: 90%;
+    }
+  }
+
+footer {
+    background-color: transparent;
+    color: #fff;
+    padding: 70px;
+    text-align: center;
+}
+
+.icon {
+    margin-right: 40px; 
+}
+
+form {
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    position: absolute; 
+    top: 210px; 
+    left: 40px; 
+    width: 350px; 
+    z-index: 10; 
+}
+
+form label {
+    display: block; 
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold; 
+}
+
+form input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: transparent ;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #333; 
+}
+
+form input::placeholder {
+    color: #666; 
+}
+
+form button {
+    padding: 10px;
+    background-color: #007bff00; 
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: calc(100% - 40px);
+}
+
+form button:hover {
+    background-color: #0095b361; 
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.product img {
+    width: 70%;
+    height: 70%;
+    border-radius: 2px;
+    flex-shrink: 0; 
+}
+
+.product-info {
+    flex: 1; 
+    padding-left: 20px;
+}
+
+.product h3 {
+    margin-top: 0;
+}
+
+.product p {
+    margin-bottom: 0;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-item img {
+    width: 100px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+.cart-item h3,
+.cart-item p {
+    margin: 0;
+}
+
+.cart-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: flex-start;
+}
+
+
+
+.total-price {
+    
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#clearCart {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px; 
+}
+
+
+#checkout {
+    background-color: #008CBA; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 170px; 
+    margin-left: 700px;
+}
+
+#timePicker {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px; 
+}
+.item-details {
+    display: inline-block; 
+    vertical-align: top; 
+    margin-left: 10px; 
+  }
+  
+  .cart-item h3, .cart-item p {
+    display: inline; 
+    margin-right: 10px;
+  }
+  
+.item-details h3,
+.item-details p {
+  margin: 2px 0; 
+  display: block; 
+}
+

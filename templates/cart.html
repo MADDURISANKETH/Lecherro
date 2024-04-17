@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lechero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>  
+    
+</head>
+<body>
+    
+    <header>
+        <a href= "{{ url_for('home') }}"> <img src="{{ url_for('static', filename='css/logo.jpeg') }}" alt="Lechero Logo" ></a>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('welcome') }}">Products</a></li>
+                <li><a href="#" onclick="logoutUser()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container">
+            <h1 align="center">Cart</h1>
+            
+        </div>
+        <div id="cartItems">
+           
+          </div>
+            <button id="clearCart">Clear Cart</button> <br><br> <br>
+            <label for="timePicker">Kindly specify a preferred delivery time for your order.</label><br><br>
+            <input type="time" id="timePicker" name="timePicker"> <br><br> <br>
+            <button id="checkout" onclick="checkout()">Checkout</button> <br>
+         
+</body>
+</html>
