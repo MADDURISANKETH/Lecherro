@@ -18,6 +18,7 @@
     </header>
     <div class="container">
         <h2>Login</h2>
+        <p> if not <a href="{{ url_for('register') }}">Registered</a> please register and try logging in </p>
         {% if error %}
             <p>Invalid email or password. Please try again.</p>
         {% endif %}

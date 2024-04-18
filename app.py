@@ -1,3 +1,4 @@
+import re
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session
 from flask_login import LoginManager, login_user, login_required, current_user
 from flask_wtf import FlaskForm
@@ -45,12 +46,13 @@ class RegisterForm(FlaskForm):
     submit = SubmitField('Register')
     
     def validate_email(self, email):
-        existing_user_email = User.query.filter_by(
-            email=email.data).first()
+        existing_user_email = User.query.filter_by(email=email.data).first()
         if existing_user_email:
-            raise ValidationError(
-                'This email is already in use. Please choose a different one.')
-            
+            raise ValidationError('This email is already in use. Please choose a different one.')
+
+        if not re.match(r'\b[A-Za-z0-9._%+-]+@(?:gmail)\.com\b', email.data):
+            raise ValidationError('Please enter a valid email address')
+                
 class LoginForm(FlaskForm):
     email = StringField(validators=[
                            InputRequired(), Length(min=4, max=50)], render_kw={"placeholder": "email"})
@@ -103,9 +105,7 @@ def login():
 @app.route('/welcome')
 @login_required
 def welcome():
-    user=current_user
-    return render_template('welcome.html', user=user)
-
+    return render_template('welcome.html')
 
 @app.route('/home')
 def home():
@@ -133,4 +133,4 @@ def checkout():
     return jsonify({'success': True})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5006)
+    app.run(debug=True)
