@@ -1,8 +1,7 @@
-Flask==2.0.1
-Flask-WTF
-Flask-Login
-Flask-Bcrypt
-Flask-Migrate
-Flask-SQLAlchemy
-WTForms==2.3.3
-gunicorn==20.0.4
+flask
+flask-login
+flsk_wtf
+wtforms
+flask_bcrypt
+flask_migrate
+flask_sqlalchemy
