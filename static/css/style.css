@@ -125,21 +125,6 @@ p {
   background-color: #a1dee101;
 }
 
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    .section-block {
-      padding: 10px;
-    }
-  
-    .company-description {
-      width: 90%;
-    }
-  }
-
 footer {
     background-color: transparent;
     color: #fff;
@@ -201,49 +186,43 @@ form button:hover {
 }
 
 .product {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: start; /* Start aligning items horizontally */
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
     background-color: transparent;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    transition: box-shadow 3s ease-in-out;
+}
+
+.product:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover for better focus */
 }
 
 .product img {
-    width: 70%;
-    height: 70%;
-    border-radius: 2px;
-    flex-shrink: 0; 
+    max-width: 150px; /* Adjust the image size */
+    margin-right: 20px; /* Add space between image and details */
+}
+
+.product-name, .product-info {
+    width: 50%; /* Adjust the width as needed */
+}
+
+.product-name h3, .product-name p {
+    margin-bottom: 10px; /* Add space between title, price, and button */
+}
+.product button{
+    margin-bottom: 10px;
+    color: #0095b3e2;
+    font-display: bold;
+
 }
 
 .product-info {
-    flex: 1; 
-    padding-left: 20px;
-}
-
-.product h3 {
-    margin-top: 0;
-}
-
-.product p {
-    margin-bottom: 0;
-}
-
-.product button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.product button:hover {
-    background-color: #45a049;
+    padding: 10px; /* Add padding around the text */
 }
 
 .cart-item {
